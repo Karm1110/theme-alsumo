@@ -1,0 +1,22 @@
+{
+    "blocks": {
+        "home": {
+            "bestseller_products": "Bestsellers"
+        }
+    },
+    "layouts": {
+        "footer": {
+            "links": "Important Links",
+            "social": "Contact Us",
+            "newsletter": "Newsletter"
+        }
+    },
+    "pages": {
+        "cart": {
+            "title": "Shopping Cart"
+        },
+        "products": {
+            "related_products": "You may also like"
+        }
+    }
+}
