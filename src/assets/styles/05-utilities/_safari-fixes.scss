@@ -1,0 +1,12 @@
+/* Safari 11+ */
+@media not all and (min-resolution:.001dpcm) { @media {
+    /**
+     * @bug: can't show background for select after hiding the arrow
+     * @solution: make select option transparent
+     */
+    .form-select {
+        option {
+            background-color: transparent;
+        }
+    }
+}}
