@@ -1,0 +1,11 @@
+.s-gifting-sent-to-you {
+  @apply text-center bg-gray-lightest p-8 rounded-md my-8;
+
+  .s-gifting-sent-to-you__title {
+    @apply text-2xl font-bold mb-4;
+  }
+
+  .s-gifting-sent-to-you__desc {
+    @apply text-lg text-gray-dark mb-6;
+  }
+}
