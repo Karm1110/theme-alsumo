@@ -1,0 +1,17 @@
+.swal2-container {
+  z-index: 9999 !important;
+}
+
+.swal2-popup {
+  .swal2-title {
+    @apply text-2xl font-bold text-gray-darker;
+  }
+
+  .swal2-confirm {
+    @apply btn btn-primary #{!important};
+  }
+
+  .swal2-cancel {
+    @apply btn btn-default #{!important};
+  }
+}
