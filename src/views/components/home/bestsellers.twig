@@ -1,0 +1,12 @@
+{% if component.products.size %}
+  <section class="bestsellers-section container s-block">
+    <h2 class="s-block__title">{{ component.title ?: trans('blocks.home.bestseller_products') }}</h2>
+    <div class.bind="component.products.size > 4 ? 'grid-flow-col' : ''" class="grid gap-4 pb-4 overflow-x-auto">
+      {% for product in component.products %}
+        <div class="w-64">
+          <salla-product-card product="{{ product }}"></salla-product-card>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+{% endif %}
