@@ -1,0 +1,29 @@
+.site-footer {
+  @apply bg-gray-lightest text-gray-dark py-12;
+
+  .footer-title {
+    @apply text-lg font-bold mb-4 text-gray-darker;
+  }
+
+  .footer-links {
+    a {
+      @apply block py-1.5 hover:text-primary;
+    }
+  }
+
+  .social-links {
+    a {
+      @apply inline-block mx-2 text-2xl;
+    }
+  }
+
+  &.dark-mode {
+    @apply bg-gray-900 text-gray-300;
+    .footer-title {
+      @apply text-white;
+    }
+    .footer-links a {
+      @apply text-gray-300 hover:text-primary;
+    }
+  }
+}
