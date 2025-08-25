@@ -1,0 +1,11 @@
+{% extends "layouts.master" %}
+
+{% block content %}
+    <div class="content">
+        {% for component in theme.components %}
+            {% if component.path %}
+                 {% include component.path with {'component':component} %}
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}
