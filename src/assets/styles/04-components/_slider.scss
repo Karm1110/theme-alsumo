@@ -1,0 +1,26 @@
+.main-slider {
+  .swiper-slide {
+    @apply bg-cover bg-center;
+    height: 500px;
+  }
+
+  .slide-content {
+    @apply container h-full flex flex-col justify-center text-center md:text-right;
+  }
+
+  .slide-title {
+    @apply text-3xl md:text-5xl font-bold text-gray-darker mb-4;
+  }
+
+  .slide-description {
+    @apply text-lg md:text-xl text-gray-dark mb-8;
+  }
+}
+
+.swiper-pagination-bullet {
+  @apply bg-primary opacity-50;
+}
+
+.swiper-pagination-bullet-active {
+  @apply opacity-100;
+}
