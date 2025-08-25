@@ -35,14 +35,12 @@
         {
             "type": "color",
             "id": "secondary_color",
-            "label": "اللون الثانوي",
-            "description": "يستخدم للعناوين وبعض الأزرار."
+            "label": "اللون الثانوي"
         },
         {
             "type": "color",
             "id": "tertiary_color",
-            "label": "اللون الثالث",
-            "description": "يستخدم للروابط والعروض الخاصة."
+            "label": "اللون الثالث"
         },
         {
             "type": "font",
@@ -99,16 +97,174 @@
         },
         {
             "id": "header_is_sticky",
-            "label": "تثبت القائمة الرئيسية أعلى الصفحة عند التمرير لأسفل",
-            "description": "يُنصح بالغاء تفعيلها في حالة وجود عناصر كثيرة في القائمة المنسدلة",
+            "label": "تثبت القائمة الرئيسية أعلى الصفحة",
             "type": "boolean",
-            "icon": "sicon-toggle-off",
             "format": "switch",
-            "required": false,
-            "value": true,
-            "selected": true
+            "value": true
         },
         {
             "type": "boolean",
-            "icon": "sicon-toggle-off",
             "label": "شريط علوي داكن",
+            "id": "topnav_is_dark",
+            "format": "switch"
+        },
+        {
+            "type": "boolean",
+            "label": "عرض روابط الصفحات الهامة في الشريط العلوي",
+            "id": "important_links",
+            "format": "switch",
+            "value": true
+        },
+        {
+            "type": "static",
+            "id": "static-line3",
+            "format": "line"
+        },
+        {
+            "type": "static",
+            "format": "title",
+            "id": "static-label4",
+            "value": "خيارات أسفل الصفحة",
+            "variant": "h6"
+        },
+        {
+            "type": "boolean",
+            "label": "الوضع الداكن للتذييل",
+            "id": "footer_is_dark",
+            "format": "switch"
+        },
+        {
+            "type": "boolean",
+            "id": "footer_social_enabled",
+            "label": "إظهار روابط التواصل الاجتماعي",
+            "format": "switch",
+            "value": true
+        },
+        {
+            "type": "boolean",
+            "id": "footer_newsletter_enabled",
+            "label": "إظهار نموذج النشرة البريدية",
+            "format": "switch",
+            "value": true
+        },
+        {
+            "type": "static",
+            "id": "static-line5",
+            "format": "line"
+        },
+        {
+            "type": "static",
+            "format": "title",
+            "id": "static-label6",
+            "value": "خيارات صفحة المنتج",
+            "variant": "h6"
+        },
+        {
+             "id": "product_images_layout",
+             "type": "items",
+             "format": "dropdown-list",
+             "label": "طريقة عرض صور المنتج",
+             "selected": [{"value": "horizontal"}],
+             "options": [
+                 {"label": "أفقي", "value": "horizontal"},
+                 {"label": "عمودي", "value": "vertical"}
+             ]
+        },
+        {
+            "type": "boolean",
+            "id": "countdown_timer_enabled",
+            "label": "إظهار عداد تنازلي للعروض",
+            "format": "switch"
+        },
+        {
+            "type": "string",
+            "id": "related_products_title",
+            "label": "عنوان قسم (منتجات ذات صلة)",
+            "multilanguage": true,
+            "value": "منتجات قد تعجبك"
+        },
+        {
+            "id": "related_products_source",
+            "type": "items",
+            "label": "عرض المنتجات ذات الصلة بناءً على",
+            "format": "dropdown-list",
+            "selected": [{"value": "category"}],
+            "options": [
+                {"label": "التصنيف", "value": "category"},
+                {"label": "الماركة التجارية", "value": "brand"}
+            ]
+        }
+    ],
+    "components": [
+        {
+            "key": "186b3f4f-25cf-4d3c-abca-cef7eed6f0ab",
+            "title": "صور متحركة (محسنة)",
+            "icon": "sicon-image-carousel",
+            "path": "home.enhanced-slider",
+            "fields": [
+                {
+                    "type": "string",
+                    "id": "video_url",
+                    "label": "رابط فيديو يوتيوب (اختياري)"
+                },
+                {
+                    "id": "slides",
+                    "type": "collection",
+                    "item_label": "صورة",
+                    "fields": [
+                        {"type": "string", "id": "slides.image", "label": "صورة البنر", "format": "image"},
+                        {"type": "string", "id": "slides.title", "label": "عنوان رئيسي", "multilanguage": true},
+                        {"type": "string", "id": "slides.description", "label": "نص إضافي", "multilanguage": true, "format": "textarea"}
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "new-bestsellers-component",
+            "title": "المنتجات الأكثر مبيعاً (جديد)",
+            "icon": "sicon-star",
+            "path": "home.bestsellers",
+            "fields": [
+                 {
+                    "type": "string",
+                    "id": "title",
+                    "label": "العنوان",
+                    "multilanguage": true,
+                    "value": "الأكثر مبيعاً"
+                },
+                {
+                    "id": "products",
+                    "type": "items",
+                    "source": "best-selling-products",
+                    "label": "المنتجات",
+                    "multichoice": true,
+                    "maxLength": 8
+                }
+            ]
+        },
+        {
+            "key": "new-features-component",
+            "title": "مميزات المتجر (محسّن)",
+            "icon": "sicon-crown",
+            "path": "home.store-features-enhanced",
+            "fields": [
+                {
+                    "type": "collection",
+                    "id": "features",
+                    "label": "المميزات",
+                    "item_label": "ميزة",
+                    "fields": [
+                        { "type": "string", "id": "features.icon", "label": "أيقونة", "format": "icon" },
+                        { "type": "string", "id": "features.title", "label": "عنوان الميزة", "multilanguage": true },
+                        { "type": "string", "id": "features.description", "label": "وصف الميزة", "multilanguage": true, "format": "textarea"}
+                    ]
+                }
+            ]
+        }
+    ],
+    "support_url": "https://salla.com/",
+    "description": {
+        "ar": "ثيم السمو: مجموعة كبيرة من المزايا لدعم تجارتك وتقديم تجربة تسوق مثيرة لعملائك",
+        "en": "Alsumo Theme: A wide range of features to support your business and provide an exciting shopping experience for your customers"
+    }
+}
