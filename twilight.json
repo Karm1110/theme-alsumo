@@ -1,0 +1,114 @@
+{
+    "name": {
+        "ar": "السمو",
+        "en": "Alsumo Theme"
+    },
+    "repository": "https://github.com/SallaApp/theme-raed",
+    "author_email": "support@salla.sa",
+    "features": [
+        "mega-menu",
+        "fonts",
+        "color",
+        "breadcrumb",
+        "unite-cards-height",
+        "component-featured-products",
+        "component-fixed-banner",
+        "component-fixed-products",
+        "component-products-slider",
+        "component-photos-slider",
+        "component-parallax-background",
+        "component-testimonials",
+        "component-square-photos",
+        "component-store-features",
+        "component-youtube",
+        "menu-images",
+        "filters"
+    ],
+    "settings": [
+        {
+            "type": "static",
+            "format": "title",
+            "id": "static-label-main",
+            "value": "🎨 تخصيص الألوان والخطوط",
+            "variant": "h5"
+        },
+        {
+            "type": "color",
+            "id": "secondary_color",
+            "label": "اللون الثانوي",
+            "description": "يستخدم للعناوين وبعض الأزرار."
+        },
+        {
+            "type": "color",
+            "id": "tertiary_color",
+            "label": "اللون الثالث",
+            "description": "يستخدم للروابط والعروض الخاصة."
+        },
+        {
+            "type": "font",
+            "id": "headings_font",
+            "label": "خط العناوين"
+        },
+        {
+            "type": "font",
+            "id": "body_font",
+            "label": "خط النصوص"
+        },
+        {
+            "type": "static",
+            "id": "static-line-anim",
+            "format": "line"
+        },
+        {
+            "type": "static",
+            "format": "title",
+            "id": "static-label-anim",
+            "value": "✨ الحركات والتأثيرات",
+            "variant": "h6"
+        },
+        {
+            "type": "boolean",
+            "id": "enable_animations",
+            "label": "تفعيل تأثيرات الدخول للعناصر",
+            "format": "switch",
+            "value": true
+        },
+        {
+            "type": "static",
+            "id": "static-line1",
+            "format": "line"
+        },
+        {
+            "type": "static",
+            "format": "title",
+            "id": "static-label2",
+            "value": "خيارات أعلى الصفحة",
+            "variant": "h6"
+        },
+        {
+            "type": "boolean",
+            "id": "announcement_bar_enabled",
+            "label": "تفعيل الشريط الإعلاني المتحرك",
+            "format": "switch"
+        },
+        {
+            "type": "string",
+            "id": "announcement_bar_text",
+            "label": "نص الشريط الإعلاني",
+            "multilanguage": true
+        },
+        {
+            "id": "header_is_sticky",
+            "label": "تثبت القائمة الرئيسية أعلى الصفحة عند التمرير لأسفل",
+            "description": "يُنصح بالغاء تفعيلها في حالة وجود عناصر كثيرة في القائمة المنسدلة",
+            "type": "boolean",
+            "icon": "sicon-toggle-off",
+            "format": "switch",
+            "required": false,
+            "value": true,
+            "selected": true
+        },
+        {
+            "type": "boolean",
+            "icon": "sicon-toggle-off",
+            "label": "شريط علوي داكن",
