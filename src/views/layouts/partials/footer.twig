@@ -1,0 +1,31 @@
+<footer class="site-footer {{ theme.settings.footer_is_dark ? 'dark-mode' : '' }}">
+    <div class="container grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="footer-col">
+            <h3 class="footer-title">{{ store.name }}</h3>
+            <p>{{ store.description }}</p>
+        </div>
+
+        <div class="footer-col">
+            <h3 class="footer-title">{{ trans('layouts.footer.links') }}</h3>
+            <div class="footer-links">
+                <salla-links source="pages" source-value="footer"></salla-links>
+            </div>
+        </div>
+
+        {% if theme.settings.footer_social_enabled %}
+        <div class="footer-col">
+            <h3 class="footer-title">{{ trans('layouts.footer.social') }}</h3>
+            <div class="social-links">
+                <salla-social-icons></salla-social-icons>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if theme.settings.footer_newsletter_enabled %}
+        <div class="footer-col">
+            <h3 class="footer-title">{{ trans('layouts.footer.newsletter') }}</h3>
+            <salla-newsletter-form></salla-newsletter-form>
+        </div>
+        {% endif %}
+    </div>
+</footer>
