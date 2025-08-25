@@ -1,1 +1,57 @@
+.btn {
+  @apply inline-block
+  text-center
+  border
+  border-transparent
+  font-bold
+  py-3
+  px-8
+  rounded-md
+  transition-all
+  duration-300
+  ease-in-out
+  cursor-pointer
+  whitespace-nowrap;
+  line-height: 1.15;
+
+  &-primary {
+    @apply bg-primary
+    border-primary
+    text-primary-fg;
+    &:hover, &:focus {
+      @apply bg-primary-dark
+      border-primary-dark
+      text-primary-fg;
+    }
+  }
+
+  &-default {
+    @apply bg-transparent
+    border-gray-lighter
+    text-gray-darker;
+    &:hover, &:focus {
+      @apply bg-gray-lightest
+      border-gray-lighter
+      text-gray-darker;
+    }
+  }
+
+  &-lg {
+    @apply py-4
+    px-12
+    text-lg;
+  }
+
+  &-sm {
+    @apply py-2
+    px-4
+    text-sm;
+  }
+
+  &[disabled],
+  &.is-loading {
+    @apply opacity-75
+    cursor-not-allowed;
+  }
+}
 
