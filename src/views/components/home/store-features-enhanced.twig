@@ -1,0 +1,11 @@
+{% if component.features|length %}
+  <section class="enhanced-features-section container s-block">
+    {% for feature in component.features %}
+      <div class="feature-item">
+        <i class="{{ feature.icon }} feature-icon"></i>
+        <h3 class="feature-title">{{ feature.title }}</h3>
+        <p class="feature-description">{{ feature.description }}</p>
+      </div>
+    {% endfor %}
+  </section>
+{% endif %}
