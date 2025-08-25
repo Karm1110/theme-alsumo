@@ -1,0 +1,11 @@
+.option-tpl--radio {
+  .option-input__label {
+    @apply relative flex items-center justify-center p-1 border-2 border-gray-lighter rounded-md cursor-pointer;
+    min-height: 45px;
+    min-width: 55px;
+  }
+
+  .option-input__input:checked + .option-input__label {
+    @apply border-primary;
+  }
+}
