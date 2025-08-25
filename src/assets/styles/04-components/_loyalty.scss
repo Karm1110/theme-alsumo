@@ -1,0 +1,15 @@
+.s-loyalty-card {
+  @apply bg-cover bg-center bg-no-repeat p-8 rounded-lg text-white my-8;
+
+  .s-loyalty-card__title {
+    @apply text-2xl font-bold mb-2;
+  }
+
+  .s-loyalty-card__points {
+    @apply text-4xl font-bold mb-4;
+  }
+
+  .s-loyalty-card__btn {
+    @apply bg-white text-primary;
+  }
+}
