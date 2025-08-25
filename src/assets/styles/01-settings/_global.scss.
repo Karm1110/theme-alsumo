@@ -1,0 +1,85 @@
+// ## Typography
+// -----------------------------------------------------------------------------
+$base-font-family: sans-serif !default;
+$base-font-size: 16px !default;
+$base-font-weight: 400 !default;
+$base-line-height: 1.5 !default;
+
+// ## Colors
+// -----------------------------------------------------------------------------
+$base-text-color: #333 !default;
+$base-background-color: #fff !default;
+$base-link-color: #007bff !default;
+
+// ## Borders
+// -----------------------------------------------------------------------------
+$base-border-color: #ddd !default;
+$base-border-radius: 4px !default;
+
+// ## Forms
+// -----------------------------------------------------------------------------
+$form-input-background: #fff !default;
+$form-input-border-color: #ccc !default;
+$form-input-text-color: #333 !default;
+
+:root {
+  --font-main: #{salla.config.get('theme.font.families.main')};
+  --font-secondary: #{salla.config.get('theme.font.families.secondary')};
+
+  --color-primary: #{salla.config.get('theme.color.primary')};
+  --color-primary-dark: #{salla.config.get('theme.color.primary_dark')};
+  --color-primary-light: #{salla.config.get('theme.color.primary_light')};
+  --color-primary-fg: #{salla.config.get('theme.color.primary_fg')};
+
+  // Alsumo Theme Custom Colors
+  --color-secondary: #{salla.config.get('theme.settings.secondary_color')};
+  --color-tertiary: #{salla.config.get('theme.settings.tertiary_color')};
+
+  --color-bg-gray: #fafafa;
+  --color-bg-gray-dark: #f1f1f1;
+  --color-text-dark: #292929;
+  --color-text-gray: #838383;
+  --color-text-light: #434343;
+  --color-border-light: #f1f1f1;
+  --color-border-dark: #e5e5e5;
+  --color-gray-darker: #4a4a4a;
+  --color-gray-dark: #696969;
+  --color-gray: #999;
+  --color-gray-light: #ccc;
+  --color-gray-lighter: #e6e6e6;
+  --color-gray-lightest: #f5f5f5;
+
+  --color-success: #21a366;
+  --color-success-bg: #e4f3ea;
+  --color-danger: #cc252b;
+  --color-danger-bg: #f9e2e2;
+  --color-warning: #f5a623;
+  --color-warning-bg: #fef4e2;
+
+  --rating-color: #ffc600;
+  --border-radius: .25rem;
+  --btn-border-radius: .3rem;
+
+  --header-height: 70px;
+  --top-nav-height: 40px;
+
+  @screen sm {
+    --header-height: 90px;
+  }
+}
+
+.dark-mode {
+  --color-bg-gray: theme('colors.gray.900');
+  --color-bg-gray-dark: theme('colors.gray.700');
+  --color-text-dark: theme('colors.white');
+  --color-text-gray: theme('colors.gray.400');
+  --color-text-light: theme('colors.white');
+  --color-border-light: theme('colors.gray.700');
+  --color-border-dark: theme('colors.gray.600');
+  --color-gray-darker: theme('colors.gray.400');
+  --color-gray-dark: theme('colors.gray.300');
+  --color-gray: theme('colors.gray.400');
+  --color-gray-light: theme('colors.gray.500');
+  --color-gray-lighter: theme('colors.gray.600');
+  --color-gray-lightest: theme('colors.gray.700');
+}
