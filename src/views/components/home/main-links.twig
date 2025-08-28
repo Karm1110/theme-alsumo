@@ -1,0 +1,39 @@
+<section class="s-block-main-links {{ component.merge_with_top_component ? 's-block-main-links--merged' : '' }}">
+    <div class="container">
+        {% if component.title %}
+            <h2 class="s-block__title">{{ component.title }}</h2>
+        {% endif %}
+        
+        <salla-slider
+                type="carousel"
+                id="main-links-slider"
+                block-title="{{ component.title }}"
+                show-controls="{{ component.show_controls }}">
+            <div class="swiper-wrapper">
+                {% if component.show_cats %}
+                    {% for category in component.categories %}
+                        <div class="swiper-slide">
+                            <a href="{{ category.url }}" class="main-link-item">
+                                <span class="main-link-item__icon">
+                                    <img src="{{ category.image.url }}" alt="{{ category.name }}">
+                                </span>
+                                <h3 class="main-link-item__title">{{ category.name }}</h3>
+                            </a>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    {% for link in component.links %}
+                        <div class="swiper-slide">
+                            <a href="{{ link.url }}" class="main-link-item">
+                                <span class="main-link-item__icon">
+                                    <i class="{{ link.icon }}"></i>
+                                </span>
+                                <h3 class="main-link-item__title">{{ link.title }}</h3>
+                            </a>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </salla-slider>
+    </div>
+</section>
