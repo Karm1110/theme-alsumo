@@ -1,0 +1,13 @@
+<section class="s-block-enhanced-square-banners container">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-{{ component.banners|length > 4 ? 5 : component.banners|length }} gap-4">
+        {% for banner in component.banners %}
+            <a href="{{ banner.url }}" class="banner-item">
+                <img src="{{ banner.image }}" alt="{{ banner.title }}">
+                <div class="banner-content">
+                    <h3 class="banner-title">{{ banner.title }}</h3>
+                    <p class="banner-description">{{ banner.description }}</p>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+</section>
