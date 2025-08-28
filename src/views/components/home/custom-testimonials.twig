@@ -1,0 +1,29 @@
+<section class="s-block-custom-testimonials container">
+    <salla-slider
+            type="carousel"
+            id="testimonials-slider"
+            block-title="{{ component.title }}">
+        <div class="swiper-wrapper">
+            {% for item in component.items %}
+                <div class="swiper-slide">
+                    <div class="testimonial-item">
+                        <div class="testimonial-content">
+                            <p>"{{ item.text }}"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="{{ item.avatar }}" alt="{{ item.name }}" class="author-avatar">
+                            <div class="author-info">
+                                <span class="author-name">{{ item.name }}</span>
+                                <div class="author-rating">
+                                    {% for i in 1..item.stars %}
+                                        <i class="sicon-star-solid"></i>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </salla-slider>
+</section>
