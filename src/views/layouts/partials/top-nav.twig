@@ -1,0 +1,13 @@
+<div class="top-nav {{ theme.settings.topnav_is_dark ? 'dark-mode' : '' }}">
+    <div class="container">
+        <div class="top-nav__links">
+            {% if theme.settings.important_links %}
+                <salla-links source="pages" source-value="important"></salla-links>
+            {% endif %}
+        </div>
+        <div class="top-nav__actions">
+            <salla-currency-switcher></salla-currency-switcher>
+            <salla-language-switcher></salla-language-switcher>
+        </div>
+    </div>
+</div>

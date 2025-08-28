@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ lang('locale_code') }}" dir="{{ lang('direction') }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    
+    <link rel="stylesheet" href="{{ asset('dist/app.css') }}">
+    
+    {# Salla's Global Head #}
+    {{ salla.head() }}
+</head>
+<body class="{{ theme.settings.footer_is_dark ? 'dark-mode' : '' }}">
+
+    {# Announcement Bar - Alsumo Theme #}
+    {% if theme.settings.announcement_bar_enabled and theme.settings.announcement_bar_text %}
+        {% include 'components.partials.announcement-bar' %}
+    {% endif %}
+
+    {# Top Navigation #}
+    {% include 'layouts.partials.top-nav' %}
+
+    {# Header #}
+    {% include 'layouts.partials.header' %}
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    {# Footer #}
+    {% include 'layouts.partials.footer' %}
+
+    {# Salla's Global Footer #}
+    {{ salla.footer() }}
+    
+    <script src="{{ asset('dist/app.js') }}"></script>
+</body>
+</html>

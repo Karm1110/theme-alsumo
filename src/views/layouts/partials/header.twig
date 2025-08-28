@@ -1,0 +1,28 @@
+<header class="site-header {{ theme.settings.header_is_sticky ? 'is-sticky' : '' }}">
+    <div class="header-wrapper container">
+        <div class="logo">
+            <a href="{{ store.url }}">
+                <img src="{{ store.logo }}" alt="{{ store.name }}">
+            </a>
+        </div>
+
+        <nav class="main-menu hidden md:block">
+            {% include 'components.partials.main-menu' %}
+        </nav>
+
+        <div class="header-actions">
+            <div class="header-action">
+                <salla-search-trigger />
+            </div>
+            <div class="header-action">
+                <salla-cart-trigger />
+            </div>
+            <div class="header-action">
+                <salla-user-menu />
+            </div>
+            <div class="header-action md:hidden">
+                <salla-mobile-menu-trigger />
+            </div>
+        </div>
+    </div>
+</header>

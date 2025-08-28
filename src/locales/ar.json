@@ -1,0 +1,22 @@
+{
+    "blocks": {
+        "home": {
+            "bestseller_products": "الأكثر مبيعاً"
+        }
+    },
+    "layouts": {
+        "footer": {
+            "links": "روابط مهمة",
+            "social": "تواصل معنا",
+            "newsletter": "النشرة البريدية"
+        }
+    },
+    "pages": {
+        "cart": {
+            "title": "سلة المشتريات"
+        },
+        "products": {
+            "related_products": "منتجات قد تعجبك"
+        }
+    }
+}

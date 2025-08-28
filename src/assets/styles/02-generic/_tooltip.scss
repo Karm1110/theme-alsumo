@@ -1,0 +1,37 @@
+[data-tooltip] {
+    @apply relative cursor-pointer;
+
+    &:before,
+    &:after {
+        @apply absolute z-20 opacity-0 invisible
+        transition-opacity duration-200 ease-in-out;
+        pointer-events: none;
+    }
+
+    &:before {
+        @apply content-[attr(data-tooltip)] bg-black text-white text-xs font-bold
+        rounded-sm py-2 px-3;
+        top: 100%;
+        left: 50%;
+        margin-top: 10px;
+        transform: translateX(-50%);
+        white-space: nowrap;
+    }
+
+    &:after {
+        @apply content-[''] border-[6px] border-solid border-transparent;
+        top: 100%;
+        left: 50%;
+        margin-left: -6px;
+        margin-top: -2px;
+        border-bottom-color: black;
+    }
+
+    &:hover {
+        &:before,
+        &:after {
+            @apply opacity-100 visible;
+        }
+    }
+}
+

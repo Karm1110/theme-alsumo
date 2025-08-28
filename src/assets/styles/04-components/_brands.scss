@@ -1,0 +1,11 @@
+.s-block-brands {
+  .brands-carousel .swiper-slide {
+    @apply text-center;
+    a {
+      @apply flex items-center justify-center h-full;
+    }
+    img {
+      @apply max-h-24 object-contain;
+    }
+  }
+}

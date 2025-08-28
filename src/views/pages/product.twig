@@ -1,0 +1,48 @@
+{% extends "layouts.master" %}
+
+{% block content %}
+    <div class="product-page container my-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {# Product Gallery #}
+            <div class="product-gallery {{ theme.settings.product_images_layout == 'vertical' ? 'product-gallery--vertical' : '' }}">
+                <salla-product-gallery images="{{ product.images }}"></salla-product-gallery>
+            </div>
+
+            {# Product Details #}
+            <div class="product-details">
+                <h1 class="text-3xl font-bold mb-2">{{ product.name }}</h1>
+                <salla-product-price product="{{ product }}"></salla-product-price>
+                
+                <div class="my-4">
+                    {{ product.description }}
+                </div>
+
+                {# Countdown Timer - Alsumo Theme #}
+                {% if theme.settings.countdown_timer_enabled and product.promotion_title %}
+                    <div class="countdown-timer">
+                        <div class="timer-title">{{ product.promotion_title }}</div>
+                        <salla-countdown date="{{ product.sale_end_date }}"></salla-countdown>
+                    </div>
+                {% endif %}
+
+                <salla-product-options product="{{ product }}"></salla-product-options>
+                
+                <salla-add-to-cart product="{{ product }}"></salla-add-to-cart>
+
+                <div class="mt-4">
+                    <salla-wishlist-button product-id="{{ product.id }}"></salla-wishlist-button>
+                </div>
+            </div>
+        </div>
+
+        {# Related Products - Alsumo Theme #}
+        <div class="related-products mt-12">
+            {% set related_source = theme.settings.related_products_source ?: 'category' %}
+            <salla-products-slider 
+                source="{{ related_source }}" 
+                source-value="{{ related_source == 'category' ? product.categories.first.id : product.brand.id }}"
+                title="{{ theme.settings.related_products_title ?: trans('pages.products.related_products') }}">
+            </salla-products-slider>
+        </div>
+    </div>
+{% endblock %}

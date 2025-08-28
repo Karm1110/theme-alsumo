@@ -1,0 +1,15 @@
+.option-tpl--image {
+  .option-input__label {
+    @apply relative flex items-center justify-center p-1 border-2 border-gray-lighter rounded-md cursor-pointer;
+    min-height: 50px;
+    min-width: 50px;
+
+    img {
+      @apply max-h-full max-w-full;
+    }
+  }
+
+  .option-input__input:checked + .option-input__label {
+    @apply border-primary;
+  }
+}

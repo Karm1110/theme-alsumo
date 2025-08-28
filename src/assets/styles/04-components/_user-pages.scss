@@ -1,0 +1,24 @@
+.user-page {
+  @apply grid grid-cols-1 md:grid-cols-4 gap-8 my-8;
+
+  .user-sidebar {
+    @apply md:col-span-1;
+    .sidebar-nav {
+      @apply border border-gray-lighter rounded-md;
+      a {
+        @apply block p-4 border-b border-gray-lighter font-bold;
+        &:last-child {
+          @apply border-b-0;
+        }
+        &.is-active,
+        &:hover {
+          @apply bg-gray-lightest text-primary;
+        }
+      }
+    }
+  }
+
+  .user-content {
+    @apply md:col-span-3;
+  }
+}

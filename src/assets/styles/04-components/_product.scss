@@ -1,0 +1,58 @@
+.product-card {
+  @apply text-center;
+
+  .product-thumb {
+    @apply relative mb-4;
+    a {
+      @apply block;
+    }
+    img {
+      @apply w-full rounded-md;
+    }
+  }
+
+  .product-title {
+    @apply text-lg font-bold mb-2;
+  }
+
+  .product-price {
+    .price {
+      @apply text-primary font-bold;
+    }
+    .original-price {
+      @apply text-gray-light line-through mx-2;
+    }
+  }
+}
+
+.product-page {
+  .product-gallery {
+    // Styles for the main product gallery on the product page
+  }
+
+  .product-details {
+    // Styles for the product details section
+  }
+}
+
+// Alsumo Theme: Vertical gallery layout
+.product-gallery--vertical {
+  @apply grid grid-cols-5 gap-4;
+  .main-image {
+    @apply col-span-4;
+  }
+  .thumbnail-images {
+    @apply col-span-1 flex flex-col gap-4;
+  }
+}
+
+// Alsumo Theme: Countdown timer
+.countdown-timer {
+  @apply bg-red-100 text-red-700 p-4 rounded-md my-4 text-center;
+  .timer-title {
+    @apply font-bold mb-2;
+  }
+  .timer-clock {
+    @apply text-2xl font-bold tracking-widest;
+  }
+}

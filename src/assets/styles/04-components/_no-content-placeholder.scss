@@ -1,0 +1,15 @@
+.no-content-placeholder {
+  @apply text-center bg-gray-lightest p-12 my-8 rounded-md;
+
+  .icon {
+    @apply text-6xl text-gray-light mb-6 block;
+  }
+
+  .title {
+    @apply text-2xl font-bold mb-2;
+  }
+
+  .description {
+    @apply text-gray-dark;
+  }
+}

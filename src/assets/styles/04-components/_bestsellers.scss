@@ -1,0 +1,25 @@
+.bestsellers-section {
+  padding: 2rem 0;
+  
+  .section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--color-text-dark);
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .product-card--bestseller:first-child {
+    grid-column: span 1;
+    @media (min-width: 768px) {
+      grid-column: span 2; // Make the first item larger on bigger screens
+    }
+  }
+}
+

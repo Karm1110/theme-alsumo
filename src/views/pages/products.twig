@@ -1,0 +1,13 @@
+{% extends "layouts.master" %}
+
+{% block content %}
+    <div class.bind="'container ' + (products.has_filters ? 'md:grid-cols-4' : 'md:grid-cols-1')" class="md:grid gap-8 my-8">
+        <div class="col-span-1">
+            <salla-products-filters />
+        </div>
+
+        <div class.bind="products.has_filters ? 'col-span-3' : 'col-span-1'" class="">
+            <salla-products-list source="json" source-value="{{ products.source_value }}" />
+        </div>
+    </div>
+{% endblock %}

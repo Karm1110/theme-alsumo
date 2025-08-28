@@ -1,0 +1,36 @@
+.site-header {
+  @apply sticky top-0 z-40 bg-white shadow-sm;
+
+  .header-wrapper {
+    @apply container flex items-center justify-between;
+    height: var(--header-height);
+  }
+
+  .logo {
+    @apply text-2xl font-bold;
+    img {
+      @apply max-h-12;
+    }
+  }
+
+  .header-actions {
+    @apply flex items-center;
+    .header-action {
+      @apply mx-2;
+      a {
+        @apply text-2xl;
+      }
+    }
+  }
+}
+
+.top-nav {
+  @apply bg-gray-100 text-sm;
+  &.dark-mode {
+    @apply bg-gray-800 text-white;
+  }
+  .container {
+    @apply flex justify-between items-center;
+    height: var(--top-nav-height);
+  }
+}

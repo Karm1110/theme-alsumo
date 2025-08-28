@@ -1,0 +1,30 @@
+.form-input,
+.form-textarea,
+.form-select {
+  @apply block
+  w-full
+  border
+  border-gray-lighter
+  rounded-md
+  py-3
+  px-4
+  transition-all
+  duration-300
+  ease-in-out;
+
+  &:focus {
+    @apply border-primary
+    ring-primary;
+  }
+}
+
+.form-textarea {
+  @apply h-32;
+}
+
+.form-label {
+  @apply block
+  font-bold
+  mb-2;
+}
+

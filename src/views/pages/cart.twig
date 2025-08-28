@@ -1,0 +1,17 @@
+{% extends "layouts.master" %}
+
+{% block content %}
+    <div class="cart-page container my-8">
+        <h1 class="text-3xl font-bold mb-8">{{ trans('pages.cart.title') }}</h1>
+        
+        <salla-cart-summary></salla-cart-summary>
+
+        <div class="mt-8">
+            <salla-cart-totals></salla-cart-totals>
+        </div>
+
+        <div class="mt-8 flex justify-end">
+            <salla-checkout-button></salla-checkout-button>
+        </div>
+    </div>
+{% endblock %}

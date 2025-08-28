@@ -1,0 +1,30 @@
+// ## Breakpoints
+// @screen sm { ... }
+// @screen md { ... }
+// @screen lg { ... }
+// @screen xl { ... }
+
+$breakpoints: (
+  'sm': '640px',
+  'md': '768px',
+  'lg': '1024px',
+  'xl': '1280px',
+  '2xl': '1536px',
+) !default;
+
+// ## Gutters
+$gutters: (
+  'sm': 1rem,
+  'md': 1rem,
+  'lg': 2rem,
+  'xl': 2rem,
+  '2xl': 2rem,
+) !default;
+
+// ## Containers
+$container-max-widths: (
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+) !default;
