@@ -1,0 +1,20 @@
+<section class="s-block-brands container">
+    {% if component.title %}
+        <h2 class="s-block__title">{{ component.title }}</h2>
+    {% endif %}
+    
+    <salla-slider
+            type="carousel"
+            id="brands-slider"
+            block-title="{{ component.title }}">
+        <div class="swiper-wrapper">
+            {% for brand in component.brands %}
+                <div class="swiper-slide">
+                    <a href="{{ brand.url }}">
+                        <img src="{{ brand.logo.url }}" alt="{{ brand.name }}">
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </salla-slider>
+</section>
