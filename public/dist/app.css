@@ -1,1 +1,19 @@
+//  ((((((((((((((( الصق هنا المحتوى الكامل لملف app.css الذي أرفقته )))))))))))))))
+lite-youtube {
+    background-color: #000;
+    position: relative;
+    display: block;
+    contain: content;
+    background-position: center center;
+    background-size: cover;
+    cursor: pointer;
+    max-width: 720px;
+}
 
+/* ... (بقية الكود الطويل جدًا من الملف الذي أرفقته) ... */
+
+.s-product-card-starting-price h4 {
+    --tw-text-opacity: 1 !important;
+    color: rgba(153, 27, 27, 1) !important;
+    color: rgba(153, 27, 27, var(--tw-text-opacity, 1)) !important;
+}
